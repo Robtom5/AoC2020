@@ -51,26 +51,26 @@ def RunCommands():
         current_command = debug[current_command.line + 1]
     return current_command, accumulator
 
-InitializeDebugger(contents)
-_ , accumulator = RunCommands()
-print(accumulator)
-# Part 2
-
-# Time to brute for this bitch
-number_of_lines = len(contents)
-brute_line = -1
-last_line = Line(-1, 'nop', 0)
-while (brute_line < number_of_lines and last_line.instruction != END):
-    brute_line += 1
-    debug = []
+if __name__ == "__main__":
     InitializeDebugger(contents)
-    if (debug[brute_line].instruction == JMP):
-        debug[brute_line].instruction = NOP
-    elif (debug[brute_line].instruction == NOP):
-        debug[brute_line].instruction = JMP
+    _ , accumulator = RunCommands()
+    print(accumulator)
+    # Part 2
 
-    last_line , accumulator= RunCommands()
+    # Time to brute for this bitch
+    number_of_lines = len(contents)
+    brute_line = -1
+    last_line = Line(-1, 'nop', 0)
+    while (brute_line < number_of_lines and last_line.instruction != END):
+        brute_line += 1
+        debug = []
+        InitializeDebugger(contents)
+        if (debug[brute_line].instruction == JMP):
+            debug[brute_line].instruction = NOP
+        elif (debug[brute_line].instruction == NOP):
+            debug[brute_line].instruction = JMP
 
-print(last_line)
-print(f"Accumulator: {accumulator}, Brute Line {brute_line}")
+        last_line , accumulator= RunCommands()
+
+    print(f"Accumulator: {accumulator}, Brute Line {brute_line}")
 
