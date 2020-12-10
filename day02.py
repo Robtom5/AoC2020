@@ -3,7 +3,7 @@ import re
 line_rule = r'(?P<min>\d+)-(?P<max>\d+) (?P<character>\D): (?P<password>\D+)'
 line_regex = re.compile(line_rule)
 
-with open("./Day2Input.txt") as infile:
+with open("./Day02Input.txt") as infile:
     lines = infile.readlines()
 
 def parse_line(line):

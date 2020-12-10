@@ -1,6 +1,6 @@
 import numpy as np
 
-with open("./Day3Input.txt") as infile:
+with open("./Day03Input.txt") as infile:
     lines = infile.readlines()
 
 EXPECTED_WIDTH = 32

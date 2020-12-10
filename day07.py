@@ -1,6 +1,6 @@
 import re
 
-with open("./Day7Input.txt") as infile:
+with open("./Day07Input.txt") as infile:
     fileContents = infile.readlines()
 
 RULE_REGEX = re.compile(r'(?P<desc>^\D+ \D+) bags contain ')

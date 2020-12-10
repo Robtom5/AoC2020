@@ -1,6 +1,6 @@
 import string
 
-with open("./Day6Input.txt") as infile:
+with open("./Day06Input.txt") as infile:
     contents = infile.read()
 
 groups = contents.split('\n\n')

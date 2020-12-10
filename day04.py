@@ -1,4 +1,4 @@
-with open("./Day4Input.txt") as infile:
+with open("./Day04Input.txt") as infile:
     contents = infile.read()
 
 passports = contents.split('\n\n')

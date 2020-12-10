@@ -1,6 +1,6 @@
 TARGET = 2020
 
-with open("./Day1Input.txt") as infile:
+with open("./Day01Input.txt") as infile:
     values = []
     for l in infile.readlines():
         values.append(int(l))

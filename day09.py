@@ -1,4 +1,4 @@
-with open("./Day9Input.txt") as infile:
+with open("./Day09Input.txt") as infile:
     contents = infile.readlines()
 
 PREAMBLE_LENGTH = 25

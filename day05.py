@@ -1,4 +1,4 @@
-with open("./Day5Input.txt") as infile:
+with open("./Day05Input.txt") as infile:
     contents = infile.readlines()
 
 NUMROWS = 128

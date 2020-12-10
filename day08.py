@@ -1,4 +1,4 @@
-with open("./Day8Input.txt") as infile:
+with open("./Day08Input.txt") as infile:
     contents = infile.readlines()
 
 NOP = 0
